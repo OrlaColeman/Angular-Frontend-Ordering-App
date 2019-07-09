@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>OnlineDeliveries</title>
+  <base href="/customerAcc">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <header>
+    <app-navbar></app-navbar>
+  </header>
+  <div class="container">
+    <h1 style="text-align:center">Account Details</h1>
+    <div class="row">
+
+      <div class="col-sm-2.5">
+        <div id="btn-group">
+          <br> <button class="btn-lg" (click)="getOrderID()">Orders</button>
+          <!-- <br> <button class="btn-lg" id="corryBtn" (click)="getCorryProducts()">Corry</button> -->
+        </div>
+        <div id="loop">
+          <div></div>
+            <div *ngFor="let item of orderIds; let i = index">
+              <a class="oID" (click)="getProductsOrdered(item)">{{item}}</a>
+            </div>
+          </div>
+        <div id="btn-group2">
+          <br> <button id="userDetailsBtn" class="btn-lg" (click)="getUserDetails()">User Details</button>
+        </div>
+        <div id="btn-group3">
+          <br> <button id="updateDetailsBtn" class="btn-sm" (click)="updateDetails()">Update
+            Details</button>
+        </div>
+        <div id="btn-group4">
+            <br> <button id="passwordBtn" class="btn-sm" (click)="updatePassword()">Update
+              Password</button>
+          </div>
+      </div>
+
+      <div class="col-sm-1"></div>
+
+      <div class="col-sm-6">
+
+        <div id="frost" class="frosted-glass">
+          <div id="products">
+            <button id="closeBtn" class="btn-sm" (click)="closeOrders()"> X </button>
+            <div *ngFor="let product of productsOrdered">
+              <div class="row">
+                <div class="col-sm-2">{{product.quantity}}</div>
+                <div class="col-sm-6">{{product.productName}}</div>
+                <div class="col-sm-3">€&nbsp;{{product.cost}}</div>
+              </div>
+            </div>
+          </div>
+          <div id="userDetails">
+            <button id="closeBtn2" class="btn-sm" (click)="closeUserDetails()"> X </button>
+            <div class="row">
+              <div class="col-sm-3">{{user.name}}</div>
+              <div class="col-sm-4">{{user.username}}</div>
+              <div class="col-sm-4">{{user.email}}</div>
+            </div>
+            <!-- {{user.name}} &nbsp;&nbsp; {{user.username}} &nbsp;&nbsp; {{user.email}} -->
+          </div>
+        </div>
+
+        <div id="frosted" class="frosted-glass">
+          
+          <div id="details">
+              <button id="closeBtn3" class="btn-sm" (click)="closeUpdateDetails()"> X </button>
+            <form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+              <div class="form-group">
+                <input type="text" placeholder="name" name="name" class="form-control" [(ngModel)]="form.name"
+                  #name='ngModel' />
+              </div>
+              <div class="form-group">
+                <input type="text" placeholder="username" name="username" class="form-control"
+                  [(ngModel)]="form.username" #username='ngModel' />
+              </div>
+              <div class="form-group">
+                <input type="email" placeholder="email" name="email" class="form-control" [(ngModel)]="form.email"
+                  #email='ngModel' />
+              </div>
+              <div class="form-group">
+                <button (keydown.enter)="onSubmit()" class="btn btn-sm">Submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div id="frosty" class="frosted-glass">
+          <div id="pword">
+              <button id="closeBtn4" class="btn-sm" (click)="closeUpdatePassword()"> X </button>
+          <form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+            <div class="form-group">
+              <label for="password"></label>
+              <input type="password" placeholder="password" class="form-control" name="password"
+                [(ngModel)]="form.password" #password='ngModel' />
+            </div>
+            <div class="form-group">
+              <button (keydown.enter)="onSubmitP()" class="btn btn-sm">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+     
+
+      </div>
+
+    </div>
+  </div>
+</body>

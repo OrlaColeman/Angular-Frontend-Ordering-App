@@ -1,0 +1,46 @@
+*{
+    overflow: auto;
+}
+body{
+    background-image: url(src/assets/img/tableFaded.jpg);
+    background-repeat: no-repeat;
+    height:  -webkit-fill-available;
+    background-position-y: -80px;
+}
+
+input[type=number]{
+
+    width: 40%;
+    height: 21px;
+}
+
+#shoppingCartBtn{
+    background-color: transparent;
+    border-color: transparent; 
+}
+.btn-sm{
+    background-color: transparent;
+    border-color: transparent;  
+}
+#displayBasket{
+    background-color: white;
+    border-color: black;
+    width: 75%;
+    text-align: center
+}
+#orderBtn{
+    margin-left: 45%;
+    margin-top: 5%;
+  
+}
+#row1{
+    margin-left: 30%;
+}
+.p{
+    line-height: 1.95;
+    margin-top: -10px;
+}
+#cost{
+    line-height: 1.95;
+    margin-top: -10px;
+}

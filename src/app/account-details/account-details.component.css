@@ -1,0 +1,51 @@
+body{
+    background-image: url(src/assets/img/vegBowl.jpg);
+    background-repeat: no-repeat;
+    height:  -webkit-fill-available;
+    background-position-y: -80px;
+    
+}
+#userDetails{
+    margin-right: 10%;
+}
+#closeBtn{
+    margin-left:102%;
+    margin-top:-4%;
+}
+
+#closeBtn2{
+    margin-left:102%;
+    margin-top:-4%;
+}
+#closeBtn3{
+    margin-left:100%;
+    margin-top:-10px;
+    margin-bottom:5px;
+}
+#closeBtn4{
+    margin-left:100%;
+    margin-top:-10px;
+    margin-bottom:5px;
+}
+.oID{
+    margin-left: 35px;
+}
+.col-sm-6{
+    margin-left: 6%;
+}
+#frost.frosted-glass{
+    margin-left: 10%;
+}
+.frosted-glass {
+    background-color: rgba(212, 211, 211, 0.74);
+    border-radius: 5px;
+    font-family: sans-serif;
+    text-align: center;
+    line-height: 1; 
+    backdrop-filter: blur(10px);  
+    -webkit-backdrop-filter: blur(10px);
+    max-width: 80%;
+    max-height: 200%;
+    margin-right: 10%;
+    padding: 20px 40px;
+  }

@@ -1,0 +1,10 @@
+body{
+    background-image: url(src/assets/img/black.png); 
+    background-repeat: no-repeat;
+    height:  -webkit-fill-available;
+    background-position-y: -80px;
+}
+.col-sm-3{
+    color: white;
+    margin-top: 80px;
+}

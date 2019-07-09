@@ -1,0 +1,51 @@
+.row{
+    margin-left: 25px;
+    /* margin-top: 20px; */
+}
+body{
+background-image: url(src/assets/img/fruitsplash.jpg);
+background-repeat: no-repeat;
+height:  -webkit-fill-available;
+background-position-y: -180px;
+}
+#fish, #meats {
+    display: none;
+    margin-top: 50%;
+}
+#veg, #misc{
+    display: none;
+    margin-top: 30%;
+}
+button{
+    border: none;
+    background-color: transparent;
+}
+#m{
+margin-top: 30px;
+transition: transform .8s;
+}
+#m:hover{
+    transform: scale(1.2);
+}
+#f{
+height: 50%;
+margin-left: 50px;
+transition: transform .8s;
+}
+#f:hover{
+    transform: scale(1.2);
+}
+#v{
+height: 280px;
+transition: transform .8s;
+}
+#v:hover{
+    transform: scale(1.2);
+}
+#mi{
+margin-top: 20px;
+transition: transform .8s;
+}
+#mi:hover{
+    transform: scale(1.2);
+}

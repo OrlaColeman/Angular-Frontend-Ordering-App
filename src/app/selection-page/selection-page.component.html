@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+
+<head>
+  <meta charset="utf-8">
+  <title>OnlineDeliveries</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>  
+  <script>
+  
+  </script>
+</head>
+
+<body ng-controller="checkboxCtrl">
+  <header>
+    <app-navbar></app-navbar>
+  </header>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-3"></div>
+      <div class="col-sm-3"></div>
+      <div class="col-sm-3" style="text-align:center">
+        <button (click)="showM()" id="hide-m"><img id="m" src='assets/img/bull.gif' class="img-fluid"></button>
+        <!-- <div id="c-hide" style="display: none; text-align:center">Corry's Meats</div>
+        <div id="f-hide" style="display: none; text-align:center">Fiddles</div> -->
+        {{checkbox.selectedMeat}}
+        <div id="meats">
+          Meats
+          <br>
+          <input type="radio" value="Corry's Meats" [(ngModel)]="checkbox.selectedMeat" (click)="hideM()" checked>   &nbsp; Corry's <br>
+          <input type="radio" value="Fiddles Meats" [(ngModel)]="checkbox.selectedMeat" (click)="hideM()" >&nbsp; Fiddles
+        </div>
+      </div>
+      <div class="col-sm-3"style="text-align:center">
+        <button (click)="showF()" id="hide-f"><img id="f" src='assets/img/fish.png' class="img-fluid"></button>
+        {{checkbox.selectedFish}}
+        <div id="fish">
+          Fish
+          <br>
+          <input type="radio" value="Mary's fish shop" [(ngModel)]="checkbox.selectedFish" (click)="hideF()" checked>&nbsp; Mary's fish shop <br>
+          <input type="radio" value="McDonaghs" [(ngModel)]="checkbox.selectedFish" (click)="hideF()">&nbsp; McDonaghs <br>
+          <input type="radio" value="Fish Market" [(ngModel)]="checkbox.selectedFish" (click)="hideF()">&nbsp; Fish Market
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-3"></div>
+      <div class="col-sm-3"></div>
+      <div class="col-sm-3" style="text-align:center">
+        <button (click)="showMisc()" id="hide-misc"><img id="mi" src='assets/img/grains.png' class="img-fluid"></button>
+        {{checkbox.selectedMisc}}
+        <div id="misc">
+          Misc
+          <br>
+          <input type="radio" value="Order Up" [(ngModel)]="checkbox.selectedMisc" (click)="hideMisc()" checked>&nbsp; Order Up <br>
+          <input type="radio" value="FreshWays" [(ngModel)]="checkbox.selectedMisc" (click)="hideMisc()">&nbsp; FreshWays <br>
+          <input type="radio" value="Pallas" [(ngModel)]="checkbox.selectedMisc" (click)="hideMisc()">&nbsp; Pallas
+        </div>
+      </div>
+      <div class="col-sm-3" style="text-align:center">
+        <button (click)="showV()" id="hide-v"><img id="v" src='assets/img/carrot.png' class="img-fluid"></button>
+        {{checkbox.selectedVeg}}
+        <div id="veg">
+          Veg
+          <br>
+          <input type="radio" value="Total Produce" [(ngModel)]="checkbox.selectedVeg" (click)="hideV()" checked>&nbsp; Total Produce <br>
+          <input type="radio" value="Fresh Veg" [(ngModel)]="checkbox.selectedVeg" (click)="hideV()">&nbsp; Fresh Veg <br>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

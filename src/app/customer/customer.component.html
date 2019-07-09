@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>OnlineDeliveries</title>
+  <base href="/customerAcc">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+</head>
+
+<body> 
+  <header>
+    <app-navbar></app-navbar> 
+  </header>
+  <div class="container-fluid">
+    <div id="first">
+      <div class="row">
+        <div class="col-sm-3">
+          <div class="bull">
+          <img src='assets/img/bull.gif' class="img-fluid" (click)="whatMeatSelected()">
+          <div class="text" style="text-align:center">{{m}}</div>
+        </div>
+      </div>
+      <div class="col-sm-3">
+          <div class="coppingers">
+          <img src='assets/img/carrot.png' class="img-fluid" (click)="whatVegSelected()">
+          <div class="text" style="text-align:center">{{v}}</div>
+        </div>
+      </div>
+      <div class="col-sm-3">
+          <div class="fish">
+          <img src='assets/img/fish.png' class="img-fluid" (click)="whatFishSelected()">
+          <div class="text" style="text-align:center">{{f}}</div>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="grain">
+        <img src='assets/img/grains.png' class="img-fluid" (click)="whatMiscSelected()">
+        <div class="text" style="text-align:center">{{misc}}</div>
+      </div>
+    </div>
+      </div>
+      </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,15 @@
+<div class="container-fluid">
+    <nav class="navbar navbar-light">
+      <button (click)="options()" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent"
+        aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>&nbsp;&nbsp;&nbsp;{{name}}
+      </button>
+    </nav>
+  </div>
+  <div id="mySidenav" class="sidenav">
+      <a class="closebtn" (click)="closeNav()">Close</a>
+      <a routerLink="/customerAcc/{{name}}">Home</a>
+      <a routerLink="/customerAcc/{{name}}/account">Account</a>
+      <a routerLink="/customerAcc/{{name}}/selection">Orders</a>
+      <a routerLink="/customerAcc/{{name}}/about-us">About Us</a>
+    </div> 

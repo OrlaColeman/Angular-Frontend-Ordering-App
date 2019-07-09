@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>OnlineDeliveries</title>
+  <base href="/customerAcc">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <header>
+      <app-navbar></app-navbar>
+  </header>
+  <div class="container-fluid">
+    <div style="text-align:center"><h1>Total Produce</h1></div><br>
+    <div class="row">
+      <div class="col-sm-14" id="orderBtn">
+          <button  class="btn btn-light" (click)="createOrder()">Create Order</button>
+      </div> 
+  </div>
+  
+  <div class="row" id="row1">
+      <!-- cost of the product -->
+    <div class="col-sm-2" id="cost">
+        Cost <br><br>
+        <div *ngFor="let product of products" id="cst" >
+          €{{product.productCost}}
+        </div>
+      </div>
+      <div class="col-sm-5.5" id="products">
+          Product <br><br>
+      <app-product class="p" [options]="checkedProducts" (toggle)="onProductChange($event)"></app-product>
+        </div>
+
+        <div class="col-sm-8" id="displayBasket">
+            <div class="row">
+            <div class="col-sm-7">
+            Product<br><br>
+          <div *ngFor="let item of productsOrdered">
+              <button id="deleteBtn" class="btn-sm btn-danger" (click)="deleteProduct(item.id)"> X </button>
+              {{item.productName}}
+            </div>
+            </div>
+            <div class="col-sm-2">
+                Cost <br><br>
+            <div *ngFor="let item of productsOrdered">
+            €&nbsp;{{item.cost}}
+          </div>
+          </div>
+      
+          <div class="col-sm-2">
+              Quantity<br><br>
+          <div *ngFor="let item of productsOrdered">
+          {{item.quantity}} 
+        </div>
+        </div> 
+        <div class="col-sm-1">
+            <button id="closeBtn" class="btn-sm" (click)="closeOrders()"> X </button>
+        </div> 
+      </div>   
+      </div>
+
+        <div class="col-sm-3" id="quantity">
+            Amount <br><br>
+          <input type="number" size="3" id="1"/> &nbsp; &nbsp; &nbsp;<button class="btn-sm" (click)="addQuantity()"><i class="fa fa-plus"></i></button><br>
+          <input type="number" size="2" id="2"/> &nbsp; &nbsp; &nbsp;<button class="btn-sm" (click)="addQuantity2()"><i class="fa fa-plus"></i></button><br>
+          <input type="number" size="2" id="3"/> &nbsp; &nbsp; &nbsp;<button class="btn-sm" (click)="addQuantity3()"><i class="fa fa-plus"></i></button><br>
+          <input type="number" size="2" id="4"/> &nbsp; &nbsp; &nbsp;<button class="btn-sm" (click)="addQuantity4()"><i class="fa fa-plus"></i></button><br>
+          <input type="number" size="2" id="5"/> &nbsp; &nbsp; &nbsp;<button class="btn-sm" (click)="addQuantity5()"><i class="fa fa-plus"></i></button><br>
+          <input type="number" size="2" id="6"/> &nbsp; &nbsp; &nbsp;<button class="btn-sm" (click)="addQuantity6()"><i class="fa fa-plus"></i></button><br>
+          <input type="number" size="2" id="7"/> &nbsp; &nbsp; &nbsp;<button class="btn-sm" (click)="addQuantity7()"><i class="fa fa-plus"></i></button> <br> 
+          <input type="number" size="2" id="8"/> &nbsp; &nbsp; &nbsp;<button class="btn-sm" (click)="addQuantity8()"><i class="fa fa-plus"></i></button>  <br>
+          <input type="number" size="2" id="9"/> &nbsp; &nbsp; &nbsp;<button class="btn-sm" (click)="addQuantity9()"><i class="fa fa-plus"></i></button> <br> 
+          <input type="number" size="2" id="10"/> &nbsp; &nbsp; &nbsp;<button class="btn-sm" (click)="addQuantity10()"><i class="fa fa-plus"></i></button> <br> 
+          <input type="number" size="2" id="11"/> &nbsp; &nbsp; &nbsp;<button class="btn-sm" (click)="addQuantity11()"><i class="fa fa-plus"></i></button>  
+        </div>
+    
+        </div>
+        <div class="row">
+          <div class="col-sm-8"></div>
+          <div class="col-sm-4" id="basket">
+            <button  class="btn btn-light"><i class="fa fa-shopping-cart" style="font-size:36px" (click)="showBasket()"></i>{{counter}}</button>
+          </div>
+        </div>
+          </div>   
+
+</body>

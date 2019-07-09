@@ -1,0 +1,59 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>OnlineDeliveries</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+  crossorigin="anonymous">
+</head>
+<body>
+    <nav class="navbar navbar-light">
+        <button (click)="options()" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent"
+          aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </nav>
+      <div id="mySidenav" class="sidenav">
+          <a class="closebtn" (click)="closeNav()">Close</a>
+          <a routerLink="/">Home</a>
+          <a routerLink="/about-us-home">About</a>
+        </div>
+    <div class=container-fluid>
+      <h1>Sign Up</h1>
+     
+      <div class="row">
+      <div class="col-sm-4"></div>
+      <div class="col-sm-6">
+        <div class="input-group input-group-sm mb-3">
+          <form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+            <div class = "form-group">
+              <label for="name"></label>
+              <input type="text" placeholder="name" class="form-control" name="name" [(ngModel)]="form.name" #name='ngModel' />
+            </div>
+            <div class="form-group">
+              <label for="username"></label>
+              <input type="text" placeholder="username" class="form-control" name="username" [(ngModel)]="form.username" #username='ngModel' />
+            </div>
+            <div class="form-group">
+                <label for="email"></label>
+                <input type="email" placeholder="email" class="form-control" name="email" [(ngModel)]="form.email" #email='ngModel' />
+              </div>
+              <div class="form-group">
+                  <label for="password"></label>
+                  <input type="password" placeholder="password" class="form-control" name="password" [(ngModel)]="form.password" #password='ngModel' />
+                </div>  
+      <div class="form-group">
+        <button (keydown.enter)="onSubmit()" class="btn btn-sm">Submit</button>
+      </div>
+    </form> 
+  </div>
+</div> 
+</div>
+</div>
+
+</body>
+</html>

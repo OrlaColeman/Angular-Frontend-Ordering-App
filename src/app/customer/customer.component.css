@@ -1,0 +1,65 @@
+body{
+  background-image: url(src/assets/img/board.jpg);
+  background-repeat: no-repeat;
+  background-position-y: -60px;
+  /* background-position-x: 80px; */
+  -webkit-filter: brightness(120%);
+  height:  -webkit-fill-available;
+  
+}
+.text{
+  color: black;
+}
+
+#first{
+
+    margin-left: 10%;
+    margin-right: 10%;
+
+}
+.row{
+  margin-top: 30%;
+  margin-bottom: 6%;
+}
+
+.bull{
+  margin-top: 40px;
+  transition: transform .8s;
+}
+.bull:hover{
+  transform: scale(1.3);
+  }
+  .fish{
+    margin-left: 50px;
+    transition: transform .8s;
+  }
+  .fish:hover{
+    transform: scale(1.3);
+    }
+    .grain{
+      margin-right: 40px;
+      margin-top: 40px;
+      transition: transform .8s;
+    }
+    .grain:hover{
+      transform: scale(1.3);
+      }   
+.coppingers{
+  margin-left: 14%;
+  width: 200px;
+  height: 200px;
+  transition: transform .8s;
+}
+.coppingers:hover{
+transform: scale(1.3);
+}
+app-sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  overflow: hidden;
+  z-index: 10;
+
+
+}
+

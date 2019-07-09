@@ -1,0 +1,42 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>OnlineDeliveries</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+  crossorigin="anonymous">
+</head>
+<body>
+  <nav class="navbar navbar-light">
+    <button (click)="options()" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent"
+      aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </nav>
+  <div id="mySidenav" class="sidenav">
+      <a class="closebtn" (click)="closeNav()">Close</a>
+      <a routerLink="/about-us-home">About</a>
+      <a routerLink="/signUp">Sign Up</a>
+    </div>
+<div id="show">  
+  <div class="container-fluid">
+    <div class=row>
+    
+      <div class='col-sm-4'></div>
+      <div class='col-sm-4' id=welcome>{{heading}}</div>
+      <div class='col-sm-4'></div>
+
+      <div class='col-sm-5'></div>
+      <div class='col-sm-2'>
+        <app-login></app-login>
+      </div>
+      <div class='col-sm-5'></div>
+   </div>
+    </div>
+  </div>
+</body>
+</html>

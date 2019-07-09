@@ -1,0 +1,19 @@
+<!-- 
+  <fieldset class = "form-group">
+    <label for="products"></label>
+    <input type="text" [(ngModel)]="form.username" #username='ngModel' />
+  </div>
+  <div class="form-group">
+    <label for="password"></label>
+    <input type="password" class="form-control" placeholder="password" name="password" [(ngModel)]="form.password" #password='ngModel' />
+  </div>
+<div class="form-group">
+<button (keydown.enter)="onSubmit()" class="btn btn-sm">login</button>
+</div>
+</form>  -->
+<div class="container">
+<label>Products</label> 
+<div *ngFor="let product of products">
+  {{product.productName}} {{product.productCost}}
+</div>
+</div> 
