@@ -1,5 +1,6 @@
 # ProjectApp
 
+This is the frontend of a web application to be used in restaurants to order supplies and keep accounts of orders made from different suppliers. This is written in Angular.
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.3.
 
 ## Development server
